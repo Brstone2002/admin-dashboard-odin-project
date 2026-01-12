@@ -1,0 +1,41 @@
+:root {
+    --dashboardColor: rgb(95, 95, 237);
+    --headerColor: rgb(255, 255, 255);
+    --bodyColor: rgb(232, 232, 232);
+    --borderShadowColor: rgb(194, 194, 194); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.dashboard-container {
+    background-color: var(--dashboardColor);
+    grid-column: 1/2;
+    grid-row: 1/6;
+}
+
+.header-container {
+    background-color: var(--headerColor);
+    grid-column: 2/6;
+    grid-row: 1/2;
+    
+    box-shadow: 0 10px 10px -5px var(--borderShadowColor);
+}
+
+.body-container {
+    background-color: var(--bodyColor);
+    grid-column: 2/6;
+    grid-row: 2/6;
+    margin-top: 5px;
+}
